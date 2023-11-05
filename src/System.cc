@@ -568,7 +568,7 @@ bool System::isShutDown() {
 
 void System::SaveTrajectoryTUM(const string &filename)
 {
-    cout << endl << "Saving camera trajectory to " << filename << " ..." << endl;
+    cout << endl << "Saving camera trajectory (TUM) to " << filename << " ..." << endl;
     if(mSensor==MONOCULAR)
     {
         cerr << "ERROR: SaveTrajectoryTUM cannot be used for monocular." << endl;
@@ -628,7 +628,7 @@ void System::SaveTrajectoryTUM(const string &filename)
 
 void System::SaveKeyFrameTrajectoryTUM(const string &filename)
 {
-    cout << endl << "Saving keyframe trajectory to " << filename << " ..." << endl;
+    cout << endl << "Saving keyframe trajectory (TUM) to " << filename << " ..." << endl;
 
     vector<KeyFrame*> vpKFs = mpAtlas->GetAllKeyFrames();
     sort(vpKFs.begin(),vpKFs.end(),KeyFrame::lId);
@@ -662,7 +662,7 @@ void System::SaveKeyFrameTrajectoryTUM(const string &filename)
 void System::SaveTrajectoryEuRoC(const string &filename)
 {
 
-    cout << endl << "Saving trajectory to " << filename << " ..." << endl;
+    cout << endl << "Saving trajectory (EuRoC) to " << filename << " ..." << endl;
     /*if(mSensor==MONOCULAR)
     {
         cerr << "ERROR: SaveTrajectoryEuRoC cannot be used for monocular." << endl;
@@ -779,7 +779,7 @@ void System::SaveTrajectoryEuRoC(const string &filename)
 void System::SaveTrajectoryEuRoC(const string &filename, Map* pMap)
 {
 
-    cout << endl << "Saving trajectory of map " << pMap->GetId() << " to " << filename << " ..." << endl;
+    cout << endl << "Saving trajectory of map (EuRoC) " << pMap->GetId() << " to " << filename << " ..." << endl;
     /*if(mSensor==MONOCULAR)
     {
         cerr << "ERROR: SaveTrajectoryEuRoC cannot be used for monocular." << endl;
@@ -1056,7 +1056,7 @@ void System::SaveTrajectoryEuRoC(const string &filename, Map* pMap)
 
 void System::SaveKeyFrameTrajectoryEuRoC(const string &filename)
 {
-    cout << endl << "Saving keyframe trajectory to " << filename << " ..." << endl;
+    cout << endl << "Saving keyframe trajectory (EuRoC) to " << filename << " ..." << endl;
 
     vector<Map*> vpMaps = mpAtlas->GetAllMaps();
     Map* pBiggerMap;
@@ -1114,7 +1114,7 @@ void System::SaveKeyFrameTrajectoryEuRoC(const string &filename)
 
 void System::SaveKeyFrameTrajectoryEuRoC(const string &filename, Map* pMap)
 {
-    cout << endl << "Saving keyframe trajectory of map " << pMap->GetId() << " to " << filename << " ..." << endl;
+    cout << endl << "Saving keyframe trajectory of map (EuRoC) " << pMap->GetId() << " to " << filename << " ..." << endl;
 
     vector<KeyFrame*> vpKFs = pMap->GetAllKeyFrames();
     sort(vpKFs.begin(),vpKFs.end(),KeyFrame::lId);
